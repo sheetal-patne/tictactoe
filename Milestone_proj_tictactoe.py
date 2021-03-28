@@ -1,4 +1,4 @@
-from Player_selection import Player_selection
+
 
 def print_board():
 	j=0
