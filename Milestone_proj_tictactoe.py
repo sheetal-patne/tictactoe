@@ -1,4 +1,15 @@
-
+def Player_selection():
+	p2='O'
+	p1=''
+	choice_list=['x','X','O','o']
+	while p1 not in choice_list: 
+		p1=(input('Player 1: what do you want to take \'X\' or \'O\'?\t')).upper()
+		if p1 not in choice_list:
+			print('Please enter a valid option')
+	if p1=='O':
+		p2='X'
+	players=[p1,p2]
+	return players
 
 def print_board():
 	j=0
