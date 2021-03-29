@@ -1,4 +1,18 @@
-from Player_selection import Player_selection
+import os
+
+def Player_selection():
+	p2='O'
+	p1=''
+	choice_list=['x','X','O','o']
+	while p1 not in choice_list: 
+		p1=(input('Player 1: what do you want to take \'X\' or \'O\'?\t')).upper()
+		if p1 not in choice_list:
+			print('Please enter a valid option')
+	if p1=='O':
+		p2='X'
+	players=[p1,p2]
+	return players
+
 
 def print_board():
 	j=0
@@ -9,7 +23,6 @@ def print_board():
 			j+=1
 			print('  ______|_______________|______')
 	print('        |               |    ')
-
 
 def game_over_check():
 	#horizontal check 
@@ -44,9 +57,10 @@ def game_over_check():
 
 def choice(p,i):
 	c='NOTHING'
+
 	
 	while c not in choice_dict:
-		c=input(f'\nPlayer {i}: Pease select the position to enter {p} (1-9):\t')
+		c=input(f'\nPlayer {i}: Please select the position to enter {p} (1-9):\t')
 		if c not in choice_dict:
 			print('Please enter valid position!')
 	i1,i2=choice_dict[c]
@@ -64,6 +78,9 @@ def change_board(c,p):
 	
 	i1,i2=choice_dict[c]
 	board[i1][i2]=p
+	clear = lambda: os.system('cls')
+	clear()
+	print('---------------------Lets Begin!!---------------------------\n\n\n')
 	print_board()
 	Winner,game_over=game_over_check()
 	return Winner,game_over
@@ -76,7 +93,9 @@ def game_Start():
 	Winner=''
 	print('\nWelcome to TIC TAC TOE, All the best!!\n\n')
 	player1,player2=Player_selection()
-	print('Lets start!!')
+	clear = lambda: os.system('cls')
+	clear()
+	print('---------------------Lets Begin!!---------------------------\n\n\n')
 
 	while not game_over:
 		while Player1_chance==1:
@@ -90,7 +109,7 @@ def game_Start():
 			winner=2
 			Player1_chance=1
 	if Winner=='No':
-		print('Game Tied, do you wanna play a new game?')
+		print('\nGame Tied, do you wanna play a new game?')
 		
 	else: 
 		print(f'\nCongrtulation Player {winner} Won the game with \'{Winner}\' token!!!')	
