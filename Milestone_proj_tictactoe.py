@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 import os
 
+=======
+>>>>>>> 1c4327bf5928ec07dc1c3ed52ad038182c26ffce
 def Player_selection():
 	p2='O'
 	p1=''
@@ -12,7 +15,10 @@ def Player_selection():
 		p2='X'
 	players=[p1,p2]
 	return players
+<<<<<<< HEAD
 
+=======
+>>>>>>> 1c4327bf5928ec07dc1c3ed52ad038182c26ffce
 
 def print_board():
 	j=0
@@ -116,7 +122,6 @@ def game_Start():
 		print('\n Do you wanna play a new game?')
 
 	while user_input not in ['Y','N','n','y']:
-
 		user_input=input('Press \'Y\' for yes and \'N\' for No: ').upper()
 		if user_input not in ['Y','N','n','y']:
 			print('Enter valid option!')
