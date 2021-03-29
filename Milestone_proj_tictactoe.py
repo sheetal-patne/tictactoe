@@ -1,8 +1,7 @@
-<<<<<<< HEAD
+
 import os
 
-=======
->>>>>>> 1c4327bf5928ec07dc1c3ed52ad038182c26ffce
+
 def Player_selection():
 	p2='O'
 	p1=''
@@ -15,10 +14,7 @@ def Player_selection():
 		p2='X'
 	players=[p1,p2]
 	return players
-<<<<<<< HEAD
 
-=======
->>>>>>> 1c4327bf5928ec07dc1c3ed52ad038182c26ffce
 
 def print_board():
 	j=0
